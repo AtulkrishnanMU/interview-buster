@@ -110,11 +110,11 @@ def body(vid, loading_bar_pose):
     pose = mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
     # Load the SVM model
-    model_path = r'E:\project demo\pgms\body\model\keypoint_classifier\XGB_model.pkl'
+    model_path = r'pgms\body\model\keypoint_classifier\XGB_model.pkl'
     svm_model = joblib.load(model_path)
 
     # Read labels
-    with open(r'E:\project demo\pgms\body\model\keypoint_classifier\keypoint_classifier_label.csv', encoding='utf-8-sig') as f:
+    with open(r'pgms\body\model\keypoint_classifier\keypoint_classifier_label.csv', encoding='utf-8-sig') as f:
         keypoint_classifier_labels = f.read().splitlines()
 
     mode = 0
