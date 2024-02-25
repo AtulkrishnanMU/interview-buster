@@ -1,0 +1,1 @@
+from pgms.hands.hand_main.model.keypoint_classifier.keypoint_classifier import KeyPointClassifier
