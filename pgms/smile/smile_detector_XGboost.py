@@ -128,13 +128,13 @@ def smile_detector(vid, loading_bar_smile):
         min_detection_confidence=0.5,
         min_tracking_confidence=0.5) 
 
-    model_save_path = r'E:\website files\bodylang\myapp\pgms\smile\model\keypoint_classifier\xgboost_model.pkl'
+    model_save_path = r'pgms\smile\model\keypoint_classifier\xgboost_model.pkl'
 
     # Load the XGBoost model
     xgb_model = joblib.load(model_save_path)
 
     # Read labels
-    with open(r'E:\website files\bodylang\myapp\pgms\smile\model\keypoint_classifier\keypoint_classifier_label.csv',
+    with open(r'pgms\smile\model\keypoint_classifier\keypoint_classifier_label.csv',
             encoding='utf-8-sig') as f:
         keypoint_classifier_labels = csv.reader(f)
         keypoint_classifier_labels = [row[0] for row in keypoint_classifier_labels]
